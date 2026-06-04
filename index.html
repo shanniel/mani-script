@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mani Script</title>
+</head>
+<body>
+    <h1>GitHub URL Detector</h1>
+    <p>Paste a GitHub URL below:</p>
+    <input type="text" id="urlInput" placeholder="Paste GitHub URL here..." style="width: 300px; padding: 8px;">
+    
+    <script>
+        // Check on page load if a GitHub URL is in the document
+        window.addEventListener('load', function() {
+            const currentUrl = window.location.href;
+            
+            // Check if current page URL contains github.com
+            if (currentUrl.includes('github.com')) {
+                alert("mani ");
+            }
+        });
+        
+        // Also listen for paste events on the input field
+        document.getElementById('urlInput').addEventListener('paste', function(event) {
+            setTimeout(function() {
+                const pastedUrl = document.getElementById('urlInput').value;
+                if (pastedUrl.includes('github.com')) {
+                    alert("mani ");
+                }
+            }, 10);
+        });
+    </script>
+</body>
+</html>
