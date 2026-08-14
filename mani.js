@@ -1,2 +1,2 @@
 console.log("External mani loaded");
-alert("mani mass");
+alert("VULNERABLE TO Cross Domain Script Include Vulnerability");
